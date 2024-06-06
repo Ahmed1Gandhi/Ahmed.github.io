@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manhwa Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Welcome to Manhwa Viewer</h1>
+        <div id="manhwa-list"></div>
+    </div>
+    <script>
+        const manhwaList = [
+            { title: "Manhwa 1", link: "#" },
+            { title: "Manhwa 2", link: "#" },
+        ];
+
+        const listContainer = document.getElementById('manhwa-list');
+        manhwaList.forEach(manhwa => {
+            const manhwaItem = document.createElement('div');
+            manhwaItem.innerHTML = `<a href="${manhwa.link}">${manhwa.title}</a>`;
+            listContainer.appendChild(manhwaItem);
+        });
+    </script>
+</body>
+</html>
